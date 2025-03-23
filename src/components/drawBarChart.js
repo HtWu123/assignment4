@@ -25,7 +25,6 @@ export let drawBarChart = (barChatLayer, data, xScale, yScale, barChartWidth, ba
     .style("cursor", "pointer")
 
     .on("mouseover", (event, d) => {
-        
         d3.select(event.currentTarget)
         .style("fill", "red")
         .raise();

@@ -33,10 +33,10 @@ export let drawScatterPlot = (scatterPlotLayer, data, xScale, yScale, tooltip, s
         .style("opacity", 0.5);
 
 
-        d3.select(event.currentTarget)
+        d3.select(event.currentTarget) 
         .attr("r", 10)
         .style("fill", "red")
-        .raise(); 
+        .raise();
 
         let stationClass = d.station.replace(/[^a-zA-Z]/g, "");
         d3.select(`.bar.${stationClass}`)
