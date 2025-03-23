@@ -71,7 +71,7 @@ const Charts = () => {
     .range([innerWidth,0]);//padding() function adds space between the bars
 
     const yScaleBar = d3.scaleLinear()
-        .domain([0, d3.max(data, d => d.start)])
+        .domain([0, 4000])
         .range([innerHeightBar, 0])
         .nice();
 
