@@ -67,11 +67,11 @@ const Charts = () => {
     //Task 6: Complete the xScaleBar and yScaleBar
     //Hint: use d3.scaleBand for xScaleBar
     const xScaleBar = d3.scaleBand()
-    .domain(dataAll.map(d => d.station))
-    .range([0, innerWidth]);//padding() function adds space between the bars
+    .domain(data.map(d => d.station))
+    .range([innerWidth,0]);//padding() function adds space between the bars
 
     const yScaleBar = d3.scaleLinear()
-        .domain([0, 4000])
+        .domain([0, d3.max(data, d => d.start)])
         .range([innerHeightBar, 0])
         .nice();
 
